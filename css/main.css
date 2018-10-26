@@ -22,12 +22,11 @@ body{
 
 
 #main {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
     display: block;
-    border-style: solid;
-    border-width: 2px;
     border-radius: 20px;
-    border-color: gainsboro;
+    border: solid;
+    border-color: #f7f7f7;
     height: 30em;
     width: 25em;
     margin: 30px auto 100px auto;
@@ -37,16 +36,15 @@ body{
 
 #main:hover {
     transform: rotateY(-180deg);
-    background-color: darkgray;
+    background-color: #f7f7f7;
+    border: solid;
+    border-color: white;
 }
-#main::after {
-    transform: rotateY(-180deg);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    background-color: darkgray;
-    content: none;
+#main:hover #icon {
+    display: none;
+}
+#main:hover > p {
+    display: none;
 }
 
 #footer {
