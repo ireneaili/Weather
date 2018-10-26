@@ -58,7 +58,9 @@ a:visited {
 }
 
 i.current-icon {
-    padding: 50px 95px 0px;
+    padding: 50px 0px 0px;
+    display: block;
+    text-align: center;
     font-size: 150px;
     animation: icon-appear 3s ease-in 0s 1, bobble 3s linear 0s infinite;
 }
@@ -76,6 +78,7 @@ i.current-icon {
 
 #temperature {
     text-align: center;
+    padding-top: 30px;
     margin: 0px;
     font-size: 45px;
     font-family: var(--main-font);    

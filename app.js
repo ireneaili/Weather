@@ -1,5 +1,3 @@
-/* eslint-env browser */
-
 var x = document.getElementById("location");
 var loader = document.getElementById("loader");
 var main = document.getElementById("main");
