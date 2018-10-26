@@ -3,23 +3,67 @@
     --font-color: darkgrey;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    background-color: aliceblue;
+    animation: color-transition 60s linear infinite;
+}
+
+@keyframes color-transition {
+    0% {background-color: rgba(254, 255, 221, 0.5);}
+    50% {background-color: #f9edf6;}
+    80% {background-color: aliceblue;}
+    100% {background-color: rgba(254, 255, 221, 0.5);}
+}
+
+
 #main {
+    background-color: rgba(255,255,255,0.8);
+    display: block;
     border-style: solid;
     border-width: 2px;
     border-radius: 20px;
     border-color: gainsboro;
     height: 30em;
     width: 25em;
-    margin: 40px auto auto;
+    margin: 30px auto 100px auto;
     overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+#main:hover {
+    transform: rotateY(-180deg);
+    background-color: darkgray;
+}
+#main::after {
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    background-color: darkgray;
+    content: none;
 }
 
 #footer {
-    position: fixed;
+    position: float;
     text-align: center;
     width: 100%;
     left: 0;
     bottom: 5px;
+}
+
+#getloc {
+    padding-top: 70px;
+    display: block;
+    text-align: center;
+}
+#getloc:hover {
+    cursor: pointer;
 }
 
 a:link {
