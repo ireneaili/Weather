@@ -27,25 +27,29 @@ body{
     border-radius: 20px;
     border: solid;
     border-color: #f7f7f7;
-    height: 30em;
-    width: 25em;
+    height: 480px;
+    width: 400px;
     margin: 30px auto 100px auto;
     overflow: hidden;
     transition: all 1s ease-in-out;
 }
 
+/*
 #main:hover {
     transform: rotateY(-180deg);
     background-color: #f7f7f7;
     border: solid;
     border-color: white;
 }
+*/
+/*
 #main:hover #icon {
     display: none;
 }
 #main:hover > p {
     display: none;
 }
+*/
 
 #footer {
     position: float;
@@ -55,10 +59,19 @@ body{
     bottom: 5px;
 }
 
-#getloc {
-    padding-top: 70px;
+#loc-container {
+    position: relative;
+    margin: auto;
+    margin-top: 60px;
     display: block;
-    text-align: center;
+    width: 400px;
+}
+
+#getloc {
+    margin-top: 30px;
+    position: absolute;
+    top: -23px;
+    left: 90%;
 }
 #getloc:hover {
     cursor: pointer;
@@ -100,7 +113,6 @@ a:visited {
 }
 
 i.current-icon {
-    padding: 50px 0px 0px;
     display: block;
     text-align: center;
     font-size: 150px;
@@ -154,6 +166,16 @@ i.current-icon {
     animation-iteration-count: 1;
 }
 
-#block {
-    display: block;
+#location {
+    font-size: 23px;
+    font-family: var(--main-font);
+    color: gray;
+    font-variant-caps: all-petite-caps;
+    font-size: 300%;
+    text-align: center;
+    animation: dropdown;
+    animation-timing-function: linear;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
+
 }

@@ -8,6 +8,7 @@
     <title>weather</title>
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/algolia.css">
     <link rel="stylesheet" href="css/weather-icons.css">
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="css/weather-icons-wind.css">
@@ -18,8 +19,15 @@
 </head>
 
 <body>
-    <IconButton id="getloc"><i class="material-icons" title="GET LOCATION">my_location</i></IconButton>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.11.0"></script>
+    <div id="loc-container">
+        <span id="input-styling-address">
+            <input type="search" placeholder="search location" />
+        </span>
+            <IconButton id="getloc"><i class="material-icons" title="GET LOCATION">my_location</i></IconButton>
+    </div>
     <div id="main">
+<!--        <p id="location"></p>-->
         <i class="fas fa-sun" id="loader"></i>
     </div>
     <div id="footer">
