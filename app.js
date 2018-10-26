@@ -21,10 +21,24 @@ function showPosition(position) {
     getLocationFromLatLng(location);
 }
 
+function clearCard() {
+    if (document.getElementById("icon") !== null) {
+        var child = document.getElementById("icon"),
+            temp = document.getElementById("temperature"),
+            summary = document.getElementById("summary"),
+            location = document.getElementById("location");
+        main.removeChild(child);
+        main.removeChild(summary);
+        main.removeChild(temp);
+        main.removeChild(location);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
     var getloc = document.getElementById("getloc");
     getloc.addEventListener("click", function () {
+        clearCard();
         if (navigator.geolocation) {
             loader.style.display = "block";
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -77,17 +91,8 @@ function getWeather(location) {
 
 function showWeather(jsonData) {
     "use strict";
-    if (document.getElementById("icon") !== null) {
-        var child = document.getElementById("icon"),
-            temp = document.getElementById("temperature"),
-            summary = document.getElementById("summary"),
-            location = document.getElementById("location");
-        main.removeChild(child);
-        main.removeChild(summary);
-        main.removeChild(temp);
-        main.removeChild(location);
-    }
-
+    clearCard();
+    
     loader.style.display = "none";
     var location = document.createElement('p');
     location.innerHTML = placesLocation;
