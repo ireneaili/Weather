@@ -1,0 +1,114 @@
+:root {
+    --main-font: 'PT Sans Narrow', sans-serif;
+    --font-color: darkgrey;
+}
+
+#main {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: gainsboro;
+    height: 30em;
+    width: 25em;
+    margin: 40px auto auto;
+    overflow: hidden;
+}
+
+#footer {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: 5px;
+}
+
+a:link {
+    color: cornflowerblue;
+    text-decoration: none;
+    font-family: var(--main-font);
+    font-variant-caps: all-small-caps;
+}
+
+a:visited {
+    color: var(--font-color);
+}
+
+.material-icons {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#loader {
+    display: none;
+    transform-origin: 200px 200px;
+    font-size: 100px;
+    transform-origin: 200px 210px;
+    text-align: center;
+    padding-top: 40%;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    0% {color: yellow;}
+    50% {color: cornflowerblue; transform: rotate(180deg)}
+    80% {color: orange; transform: rotate(270deg)}
+    100% {color: yellow; transform: rotate(360deg);}
+}
+
+i.current-icon {
+    padding: 50px 95px 0px;
+    font-size: 150px;
+    animation: icon-appear 3s ease-in 0s 1, bobble 3s linear 0s infinite;
+}
+@keyframes icon-appear {
+    0% {opacity: 0;}
+    50% {opacity: 0.5}
+    100% {opacity: 1;}
+}
+
+@keyframes bobble {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(0px, 5px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+#temperature {
+    text-align: center;
+    margin: 0px;
+    font-size: 45px;
+    font-family: var(--main-font);    
+    color: var(--font-color);
+    animation: dropdown;
+    animation-timing-function: linear;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
+}
+
+@keyframes dropdown {
+    0% {opacity: 0; transform: translateY(-30px);}
+    50% {opacity: 0.5; transform: translateY(-10px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}
+@keyframes flyup {
+    0% {opacity: 0; transform: translateY(30px);}
+    50% {opacity: 0.5; transform: translateY(10px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}
+
+#summary {
+    text-align: center;
+    margin: 5px;
+    font-size: 23px;
+    font-family: var(--main-font);    
+    color: var(--font-color);
+    animation: flyup;
+    animation-timing-function: linear;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
+}
+
+#block {
+    display: block;
+}
